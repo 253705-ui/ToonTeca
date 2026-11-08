@@ -1,10 +1,7 @@
 package com.lexziewyn.toonteca.domain.model
 
-import kotlinx.serialization.Serializable
-
-@Serializable
 data class Weebcomic(
-    val id: String = "",
+    val id: Int = 0,
     val titulo: String,
     val genero: String,
     val capitulosTotales: Int,
