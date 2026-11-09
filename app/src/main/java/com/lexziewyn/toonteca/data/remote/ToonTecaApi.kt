@@ -14,18 +14,18 @@ interface ToonTecaApi {
     @POST("register")
     suspend fun register(@Body request: RegisterRequest): AuthResponse
 
-    @GET("comics")
+    @GET("weebcomics")
     suspend fun getComics(): List<WeebcomicDto>
 
-    @GET("comics/{id}")
+    @GET("weebcomics/{id}")
     suspend fun getComicById(@Path("id") id: Int): WeebcomicDto
 
-    @POST("comics")
+    @POST("weebcomics")
     suspend fun insertComic(@Body comic: WeebcomicDto): WeebcomicDto
 
-    @PUT("comics/{id}")
+    @PUT("weebcomics/{id}")
     suspend fun updateComic(@Path("id") id: Int, @Body comic: WeebcomicDto): WeebcomicDto
 
-    @DELETE("comics/{id}")
+    @DELETE("weebcomics/{id}")
     suspend fun deleteComic(@Path("id") id: Int)
 }
